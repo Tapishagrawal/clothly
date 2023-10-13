@@ -13,6 +13,7 @@ export default function CountContextProvider({ children }) {
             setCartCount(cartData.length);
         }
 
+        
         const wishListData = getDataFromLocal("wishListData");
         if (wishListData) {
             setWishListCount(wishListData.length);
