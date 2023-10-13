@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { getDataFromLocal } from "../redux/localReducer/action";
 
 export const CountContext = createContext();
@@ -13,7 +13,7 @@ export default function CountContextProvider({ children }) {
             setCartCount(cartData.length);
         }
 
-        
+
         const wishListData = getDataFromLocal("wishListData");
         if (wishListData) {
             setWishListCount(wishListData.length);
